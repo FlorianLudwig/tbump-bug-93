@@ -23,22 +23,6 @@ regex = '''
 message_template = "Bump to {new_version}"
 tag_template = "v{new_version}"
 
-# For each file to patch, add a [[tool.tbump.file]] config
-# section containing the path of the file, relative to the
-# tbump.toml location.
 [[tool.tbump.file]]
-src = "..."
+src = "foo"
 
-# You can specify a list of commands to
-# run after the files have been patched
-# and before the git commit is made
-
-#  [[tool.tbump.before_commit]]
-#  name = "check changelog"
-#  cmd = "grep -q {new_version} Changelog.rst"
-
-# Or run some commands after the git tag and the branch
-# have been pushed:
-#  [[tool.tbump.after_push]]
-#  name = "publish"
-#  cmd = "./publish.sh"
